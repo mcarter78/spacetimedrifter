@@ -4,7 +4,8 @@ class DestinationsController < ApplicationController
     render :index
   end
   def show
-    @destination = Destination.find(:id)
+    @destination = Destination.find(params[:id])
+    @posts = Post.all
     render :show
   end
 end

@@ -1,7 +1,18 @@
 <h1><%= @destination.name %></h1>
-<div class="destination-banner">
+<div id="destination-banner">
   <%= image_tag("#{@destination.banner_image_url}", alt: "#{@destination.name} banner image") %>
 </div>
-<div class="destination-description">
+<div id="destination-description">
   <%= @destination.description %>
+</div>
+<div id="destination-posts">
+  <% @posts.each do |post| %>
+    <% if post.destination_id == @destination.id %>
+      <%= post.content %>
+      <br>
+    <% end %>
+  <% end %>
+</div>
+<div>
+  <%= button_to "Add Post", new_post_path, method: :get %>
 </div>
