@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   resources :users
-  resources :destinations
+  resources :destinations, only: [:index, :show]
 end
