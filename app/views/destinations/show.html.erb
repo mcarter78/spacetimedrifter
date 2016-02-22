@@ -1,0 +1,7 @@
+<h1><%= @destination.name %></h1>
+<div class="destination-banner">
+  <%= image_tag("#{@destination.banner_image_url}", alt: "#{@destination.name} banner image") %>
+</div>
+<div class="destination-description">
+  <%= @destination.description %>
+</div>
