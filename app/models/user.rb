@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+  has_many :posts
+  has_many :destinations, through: :posts
+  
   has_secure_password
 
   def self.confirm(params)
