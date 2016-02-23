@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: "home#index"
   resources :users
   resources :destinations, only: [:index, :show]
   get "/destinations/:id/posts/new", to: "posts#new", as: :new_post

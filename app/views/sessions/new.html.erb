@@ -1,16 +1,17 @@
+<div id="main-content">
+  <h1>Welcome Back, Drifter!</h1>
 
-<h1>Welcome Back, Drifter!</h1>
+  <div id="sign-in">
 
-<div id="sign-in">
-
-  <h3>Sign In:</h3>
-  <%= form_for @user, url: "/sessions", method: "post" do |f| %>
-    <div>
-      <%= f.text_field :email, placeholder: "Email" %>
-    </div>
-    <div>
-      <%= f.password_field :password, placeholder: "Password" %>
-    </div>
-    <%= f.submit "Sign In" %>
-  <% end %>
+    <h3>Sign In:</h3>
+    <%= form_for @user, url: "/sessions", method: "post" do |f| %>
+      <div>
+        <%= f.text_field :email, placeholder: "Email", autocomplete: "off" %>
+      </div>
+      <div>
+        <%= f.password_field :password, placeholder: "Password" %>
+      </div>
+      <%= f.submit "Sign In" %>
+    <% end %>
+  </div>
 </div>

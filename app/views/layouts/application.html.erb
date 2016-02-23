@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>HyperspaceDrifter</title>
+  <title>SpaceTimeDrifter</title>
   <link href='https://fonts.googleapis.com/css?family=Orbitron:400,700,900' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -9,12 +9,12 @@
 </head>
 <body>
   <header>
-    <span id="hero">HyperspaceDrifter</span>
+    <%= link_to "SpaceTimeDrifter", root_path, id: "hero" %>
     <%= button_to "Log Out", sessions_path, method: :delete, id: "logout-button" %>
   </header>
-  <div id="main-content">
+
     <%= yield %>
-  </div>
+
 
 </body>
 </html>
