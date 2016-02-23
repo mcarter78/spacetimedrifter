@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :logged_in?
-  
+
   def index
     @users = User.all
     render :index
@@ -18,6 +18,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @posts = Post.all
     render :show
   end
 
