@@ -1,14 +1,16 @@
 class PostsController < ApplicationController
+  before_action :logged_in?
+
   def new
     @destination = Destination.find(params[:id])
-    @user = User.find(1) # TODO: this is temporarily set to first user for testing purposes, change to current_user
+    @user = current_user
     @post = Post.new
     render :new
   end
 
   def create
     @destination = Destination.find(params[:id])
-    @user = User.find(1) # TODO: this is temporarily set to first user for testing purposes, change to current_user
+    @user = current_user
     @post = Post.create(post_params)
     redirect_to @destination
   end
