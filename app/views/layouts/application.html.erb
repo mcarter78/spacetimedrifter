@@ -10,11 +10,11 @@
 <body>
   <header>
     <%= link_to "SpaceTimeDrifter", root_path, id: "hero" %>
-    <%# if current_user %>
-      <%#= button_to "Log Out", sessions_path, method: :delete, id: "logout-button" %>
-    <%# else %>
-      <%#= button_to "Log In", sign_in_path, method: :get, id: "logout-button" %>
-    <%# end %>
+    <% if @current_user %>
+      <%= button_to "Log Out", sessions_path, method: :delete, id: "logout-button" %>
+    <% else %>
+      <%= button_to "Log In", sign_in_path, method: :get, id: "logout-button" %>
+    <% end %>
   </header>
 
   <%= yield %>
