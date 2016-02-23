@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   delete "/destinations/:id/posts/:id", to: "posts#destroy"
   get "/sign_in", to: "sessions#new"
   post "/sessions", to: "sessions#create"
+  delete "/sessions", to: "sessions#destroy"
 end

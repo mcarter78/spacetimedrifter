@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Voyagemenauts</title>
+  <title>HyperspaceDrifter</title>
+  <link href='https://fonts.googleapis.com/css?family=Orbitron:400,700,900' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+  <header>
+    <span id="hero">HyperspaceDrifter</span>
+    <%= button_to "Log Out", sessions_path, method: :delete, id: "logout-button" %>
+  </header>
+  <div id="main-content">
+    <%= yield %>
+  </div>
 
 </body>
 </html>

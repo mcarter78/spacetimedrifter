@@ -1,4 +1,6 @@
 class DestinationsController < ApplicationController
+  before_action :logged_in?
+  
   def index
     @destinations = Destination.all
     render :index
