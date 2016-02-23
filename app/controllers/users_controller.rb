@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
-  before_action :logged_in?
+  before_action :logged_in?, except: [:new, :create]
 
   def index
+    @current_user = current_user
     @users = User.all
     render :index
   end
@@ -12,7 +13,8 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.create(user_params)
+    user = User.create!(user_params)
+    login user
     redirect_to user
   end
 
