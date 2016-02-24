@@ -11,7 +11,7 @@
   <header>
     <%= link_to "SpaceTimeDrifter", root_path, id: "hero" %>
     <% if @current_user %>
-      <%= button_to "Log Out", sessions_path, method: :delete, id: "logout-button" %>
+      <%= button_to "#{@current_user.username} | Log Out", sessions_path, method: :delete, id: "logout-button" %>
     <% else %>
       <%= button_to "Log In", sign_in_path, method: :get, id: "logout-button" %>
     <% end %>
@@ -19,6 +19,13 @@
 
   <%= yield %>
 
-
+  <footer>
+    <% if @current_user %>
+      <div id="footer-buttons">
+        <%= button_to "Drifters", users_path, method: :get, class: "footer-button" %>
+        <%= button_to "Destinations", destinations_path, method: :get, class: "footer-button" %>
+      </div>
+    <% end %>
+  </footer>
 </body>
 </html>

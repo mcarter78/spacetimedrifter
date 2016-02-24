@@ -14,7 +14,7 @@ body {
 
 header {
   border-bottom: 20px solid #b0740a;
-  height: 80px;
+  height: 11%;
   margin: 0;
   padding: 0;
 }
@@ -26,7 +26,7 @@ a {
 
 #main-content {
   width: 70%;
-  height: 65%;
+  height: 60%;
   margin: 50px auto;
   background-color: rgba(46, 24, 1, 0.8);
   border-radius: 10px;
@@ -69,7 +69,7 @@ input:focus, textarea:focus {
 }
 
 #logout-button {
-  width: 70px;
+  width: 150px;
   display: inline-block;
   float: right;
   margin: 50px 20px;
@@ -116,4 +116,25 @@ input:focus, textarea:focus {
   border-radius: 5px;
   text-align: center;
   margin-top: 20px;
+}
+
+footer {
+  text-align: center;
+  height: 8%;
+}
+
+#footer-buttons {
+  text-align: center;
+  margin: 0 auto;
+  width: 50%;
+  height: 100%;
+}
+
+.footer-button {
+  color: #b0740a;
+  width: 50%;
+  display: inline-block;
+  float: left;
+  font-size: 1em;
+  border: none;
 }
