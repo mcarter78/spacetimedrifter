@@ -4,13 +4,13 @@
 
     <%= form_for @user do |f| %>
       <div>
-        <%= f.text_field :username, placeholder: "Change Username" %>
+        <%= f.text_field :username, placeholder: "Change Username", autocomplete: "off" %>
       </div>
       <div>
-        <%= f.email_field :email, placeholder: "Change Email Address" %>
+        <%= f.email_field :email, placeholder: "Change Email Address", autocomplete: "off" %>
       </div>
       <div>
-        <%= f.text_field :avatar_url, placeholder: "Change URL for your Avatar Image" %>
+        <%= f.text_field :avatar_url, placeholder: "Change URL for your Avatar Image", autocomplete: "off" %>
       </div>
       <div>
         <%= f.text_area :about_me, placeholder: "Change About Me Content" %>

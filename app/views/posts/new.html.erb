@@ -8,7 +8,7 @@
           <%= f.text_area :content, placeholder: "Add your post here" %>
         </div>
         <div>
-          <%= f.text_field :photo_url, placeholder: "Add a photo (URL goes here)" %>
+          <%= f.text_field :photo_url, placeholder: "Add a photo (URL goes here)", autocomplete: "off" %>
         </div>
         <%= f.submit "Post" %>
       <% end %>
