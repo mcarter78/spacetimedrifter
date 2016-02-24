@@ -1,20 +1,22 @@
-<div id="main-content">
-  <h1 id="instance-title"><%= @destination.name %></h1>
-  <div id="destination-banner">
-    <%= image_tag("#{@destination.banner_image_url}", alt: "#{@destination.name} banner image") %>
-  </div>
-  <div id="destination-description">
-    <%= @destination.description %>
-  </div>
-  <div id="destination-posts">
-    <% @posts.each do |post| %>
-      <% if post.destination_id == @destination.id %>
-        <%= post.content %>
-        <br>
+<div id="scrollfix">
+  <div id="main-content">
+    <h1 id="instance-title"><%= @destination.name %></h1>
+    <div id="destination-banner">
+      <%= image_tag("#{@destination.banner_image_url}", alt: "#{@destination.name} banner image") %>
+    </div>
+    <div id="destination-description">
+      <%= @destination.description %>
+    </div>
+    <div id="destination-posts">
+      <% @posts.each do |post| %>
+        <% if post.destination_id == @destination.id %>
+          <%= post.content %>
+          <br>
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
-  <div>
-    <%= button_to "Add Post", new_post_path, method: :get %>
+    </div>
+    <div>
+      <%= button_to "Add Post", new_post_path, method: :get %>
+    </div>
   </div>
 </div>

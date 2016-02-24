@@ -1,23 +1,25 @@
-<div id="main-content">
-  <h1>Join The Drifters!</h1>
-  <div id="new-user">
-    <%= form_for @user do |f| %>
-      <div>
-        <%= f.text_field :username, placeholder: "Choose a Username" %>
-      </div>
-      <div>
-        <%= f.password_field :password, placeholder: "Create a Password" %>
-      </div>
-      <div>
-        <%= f.email_field :email, placeholder: "Enter Your Email Address" %>
-      </div>
-      <div>
-        <%= f.text_field :avatar_url, placeholder: "Provide URL for your Avatar Image" %>
-      </div>
-      <div>
-        <%= f.text_area :about_me, placeholder: "Tell us a little about yourself!" %>
-      </div>
-      <%= f.submit "Create!" %>
-    <% end %>
+<div id="scrollfix">
+  <div id="main-content">
+    <h1>Join The Drifters!</h1>
+    <div id="new-user">
+      <%= form_for @user do |f| %>
+        <div>
+          <%= f.text_field :username, placeholder: "Choose a Username" %>
+        </div>
+        <div>
+          <%= f.password_field :password, placeholder: "Create a Password" %>
+        </div>
+        <div>
+          <%= f.email_field :email, placeholder: "Enter Your Email Address" %>
+        </div>
+        <div>
+          <%= f.text_field :avatar_url, placeholder: "Provide URL for your Avatar Image" %>
+        </div>
+        <div>
+          <%= f.text_area :about_me, placeholder: "Tell us a little about yourself!" %>
+        </div>
+        <%= f.submit "Create!" %>
+      <% end %>
+    </div>
   </div>
 </div>

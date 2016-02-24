@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   def create
     user = User.create(user_params)
     login user
-    flash[:success] = "! | Success! Welcome, Drifter!"
+    flash[:success] = "<span id='check'>&#x2713;</span> | Success! Welcome, Drifter!"
     redirect_to user
   end
 

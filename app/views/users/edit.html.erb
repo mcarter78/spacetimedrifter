@@ -1,19 +1,21 @@
-<div id="main-content">
-  <h1>Edit Profile</h1>
+<div id="scrollfix">
+  <div id="main-content">
+    <h1>Edit Profile</h1>
 
-  <%= form_for @user do |f| %>
-    <div>
-      <%= f.text_field :username, placeholder: "Change Username" %>
-    </div>
-    <div>
-      <%= f.email_field :email, placeholder: "Change Email Address" %>
-    </div>
-    <div>
-      <%= f.text_field :avatar_url, placeholder: "Change URL for your Avatar Image" %>
-    </div>
-    <div>
-      <%= f.text_area :about_me, placeholder: "Change About Me Content" %>
-    </div>
-    <%= f.submit "Update" %>
-  <% end %>
+    <%= form_for @user do |f| %>
+      <div>
+        <%= f.text_field :username, placeholder: "Change Username" %>
+      </div>
+      <div>
+        <%= f.email_field :email, placeholder: "Change Email Address" %>
+      </div>
+      <div>
+        <%= f.text_field :avatar_url, placeholder: "Change URL for your Avatar Image" %>
+      </div>
+      <div>
+        <%= f.text_area :about_me, placeholder: "Change About Me Content" %>
+      </div>
+      <%= f.submit "Update" %>
+    <% end %>
+  </div>
 </div>
