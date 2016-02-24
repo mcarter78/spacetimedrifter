@@ -2,9 +2,12 @@
   <div id="main-content">
     <h1>Current Drifters:</h1>
 
-    <ul>
+    <ul class="index">
       <% @users.each do |user| %>
-        <li><%= image_tag("#{user.avatar_url}", alt: "#{user.username} avatar") %><%= user.username %></li>
+        <li><%= image_tag("#{user.avatar_url}", alt: "#{user.username} avatar", id: "index-avatar") %>
+          <%= link_to "#{user.username}", user %>
+          <span id="posts-span">  Posts: <%= user.posts.count %></span>
+        </li>
       <% end %>
     </ul>
   </div>

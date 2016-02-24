@@ -3,10 +3,10 @@
     <div id="post-form">
       <h1>Add a post for <%= @destination.name %></h1>
       <%= form_for @post, url: destination_posts_path do |f| %>
-        <%= f.hidden_field :user_id, value: @user.id %>
-        <%= f.hidden_field :destination_id, value: @destination.id %>
+        <%= f.hidden_field :user_id, value: @user.id, required: true %>
+        <%= f.hidden_field :destination_id, value: @destination.id, required: true %>
         <div>
-          <%= f.text_area :content, placeholder: "Add your post here" %>
+          <%= f.text_area :content, placeholder: "Add your post here", required: true %>
         </div>
         <div>
           <%#= f.text_field :photo_url, placeholder: "Add a photo (URL goes here)", autocomplete: "off" %>

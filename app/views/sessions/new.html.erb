@@ -2,7 +2,6 @@
   <div id="main-content">
     <h1>Welcome Back, Drifter!</h1>
     <div id="sign-in">
-      <h3>Sign In:</h3>
       <%= form_for @user, url: "/sessions", method: "post" do |f| %>
         <div>
           <%= f.text_field :email, placeholder: "Email", autocomplete: "off" %>
@@ -10,7 +9,7 @@
         <div>
           <%= f.password_field :password, placeholder: "Password" %>
         </div>
-        <%= f.submit "Sign In" %>
+        <%= f.submit "Sign In", id: "post-button" %>
       <% end %>
       <% flash.each do |message_type, message| %>
             <div class="flash <%= message_type %>"><%= message %></div>
