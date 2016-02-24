@@ -1,6 +1,7 @@
 <div id="scrollfix">
   <div id="main-content">
     <div id="post-form">
+      <h1>Add a post for <%= @destination.name %></h1>
       <%= form_for @post, url: destination_posts_path do |f| %>
         <%= f.hidden_field :user_id, value: @user.id %>
         <%= f.hidden_field :destination_id, value: @destination.id %>
@@ -8,9 +9,9 @@
           <%= f.text_area :content, placeholder: "Add your post here" %>
         </div>
         <div>
-          <%= f.text_field :photo_url, placeholder: "Add a photo (URL goes here)", autocomplete: "off" %>
+          <%#= f.text_field :photo_url, placeholder: "Add a photo (URL goes here)", autocomplete: "off" %>
         </div>
-        <%= f.submit "Post" %>
+        <%= f.submit "Post", id: "post-button" %>
       <% end %>
     </div>
   </div>
