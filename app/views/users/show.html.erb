@@ -1,6 +1,10 @@
 <div id="main-content">
   <h1 id="instance-title"><%= @user.username %></h1>
-
+  <div id="success-message">
+    <% flash.each do |message_type, message| %>
+          <div class="flash <%= message_type %>"><%= message %></div>
+    <% end %>
+  </div>
   <div>
     <%= image_tag("#{@user.avatar_url}", alt: "#{@user.username} avatar") %>
   </div>

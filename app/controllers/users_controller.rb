@@ -13,8 +13,9 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.create!(user_params)
+    user = User.create(user_params)
     login user
+    flash[:success] = "! | Success! Welcome, Drifter!"
     redirect_to user
   end
 
