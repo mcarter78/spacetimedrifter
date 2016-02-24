@@ -21,6 +21,11 @@ header {
 
 a {
   text-decoration: none;
+  color: #b0740a;
+}
+
+a:hover {
+color: rgba(176, 116, 10, 0.5);
 }
 
 #scrollfix {
@@ -81,8 +86,9 @@ input:focus, textarea:focus {
   width: 50px;
   display: inline-block;
   float: right;
-  margin: 45px 20px;
+  margin: 55px 20px;
   font-family: "Orbitron", helvetica, sans-serif;
+  font-size: 0.8em;
   background-color: rgba(46, 24, 1, 0);
   color: #b0740a;
   border: none;
@@ -93,11 +99,11 @@ input:focus, textarea:focus {
 }
 
 #logout-button {
-  width: 70px;
   display: inline;
   float: right;
-  margin: 45px 20px 50px 0;
+  margin: 55px 20px 50px 0;
   font-family: "Orbitron", helvetica, sans-serif;
+  font-size: 0.8em;
   background-color: rgba(46, 24, 1, 0);
   color: #b0740a;
   border: none;
@@ -108,11 +114,11 @@ input:focus, textarea:focus {
 }
 
 #profile-button {
-  width: 120px;
   display: inline;
   float: right;
-  margin: 45px 0 50px 0;
+  margin: 55px 20px 50px 0;
   font-family: "Orbitron", helvetica, sans-serif;
+  font-size: 0.8em;
   background-color: rgba(46, 24, 1, 0);
   color: #b0740a;
   border: none;

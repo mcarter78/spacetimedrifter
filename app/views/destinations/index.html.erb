@@ -1,9 +1,9 @@
 <div id="scrollfix">
   <div id="main-content">
     <h1>Destinations:</h1>
-    <ul>
+    <ul class="index">
     <% @destinations.each do |dest| %>
-      <li><%= dest.name %></li>
+      <li><%= link_to "#{dest.name}", dest, method: :get %></li>
     <% end %>
   </div>
 </div>

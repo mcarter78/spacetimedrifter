@@ -11,10 +11,10 @@
   <header>
     <%= link_to "SpaceTimeDrifter", root_path, id: "hero" %>
     <% if @current_user %>
-      <%= button_to "Log Out", sessions_path, method: :delete, id: "logout-button" %>
-      <%= button_to "#{@current_user.username}'s Profile    ", @current_user, method: :get, id: "profile-button" %>  
+      <%= link_to "Log Out", sessions_path, method: :delete, id: "logout-button" %>
+      <%= link_to "#{@current_user.username}'s Profile    ", @current_user, method: :get, id: "profile-button" %>
     <% else %>
-      <%= button_to "Log In", sign_in_path, method: :get, id: "login-button" %>
+      <%= link_to "Log In", sign_in_path, method: :get, id: "login-button" %>
     <% end %>
   </header>
 
