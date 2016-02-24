@@ -3,7 +3,7 @@
     <h1>Destinations:</h1>
     <ul class="index">
     <% @destinations.each do |dest| %>
-      <li><%= link_to "#{dest.name}", dest, method: :get %></li>
+      <li><%= link_to "#{dest.name}", dest, method: :get %><span id="posts-span">  Posts: <%= dest.posts.count %></span></li>
     <% end %>
   </div>
 </div>

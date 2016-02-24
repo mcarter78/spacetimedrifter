@@ -8,15 +8,26 @@
       <%= @destination.description %>
     </div>
     <div id="destination-posts">
+      <h2 id="posts">Drifter Posts:</h2>
       <% @posts.each do |post| %>
         <% if post.destination_id == @destination.id %>
-          <%= post.content %>
-          <br>
+          <div id="post-content">
+            <ul class="index">
+              <li>
+                <span id="post-user">
+                  <% @user = User.find(post.user_id) %>
+                  <%= image_tag("#{@user.avatar_url}", id: "post-avatar") %>
+                  <%= link_to "#{@user.username}:", "/users/#{@user.id}" %>
+                </span><br>
+                <%= post.content %>
+              </li>
+            </ul>
+          </div>
         <% end %>
       <% end %>
     </div>
-    <div>
-      <%= button_to "Add Post", new_post_path, method: :get %>
+    <div id="add-post">
+      <%= button_to "Add a Post to #{@destination.name}", new_post_path, method: :get, id: "add-post-button" %>
     </div>
   </div>
 </div>
