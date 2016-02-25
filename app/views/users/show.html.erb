@@ -6,18 +6,30 @@
             <div class="flash <%= message_type %>"><%= message.html_safe %></div>
       <% end %>
     </div>
-    <div>
-      <%= image_tag("#{@user.avatar_url}", alt: "#{@user.username} avatar") %>
+    <div id="user">
+      <%= image_tag("#{@user.avatar_url}", alt: "#{@user.username} avatar", id: "user-avatar") %>
+      <div id="about-me">
+        <% if @current_user == @user %>
+          <%= button_to "Edit Profile", edit_user_path, method: :get, id: "edit-profile-button" %>
+        <% end %>
+        <h2>About Me:</h2>
+        <%= @user.about_me %>
+      </div>
     </div>
-    <div>
-      <%= @user.about_me %>
-    </div>
-    <h2 id="posts"><%= @user.username %>'s Posts:</h2>
-    <div id="user-posts">
+    <div id="post-content">
+      <h2 id="posts"><%= @user.username %>'s Posts:</h2>
       <% @posts.each do |post| %>
         <% if post.user_id == @user.id %>
-          <%= post.content %>
-          <br>
+            <ul class="index">
+              <li>
+                <span id="post-user">
+                  <% @dest = Destination.find(post.destination_id) %>
+                  <%= image_tag("#{@dest.name}.png", id: "planet-avatar-sm") %>
+                  <%= link_to "#{@dest.name}:", "/destinations/#{@dest.id}" %>
+                </span><br>
+                <%= post.content %><br>
+              </li>
+            </ul>
         <% end %>
       <% end %>
     </div>

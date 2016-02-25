@@ -200,6 +200,7 @@ input:focus, textarea:focus {
   margin-bottom: 0;
 }
 
+
 .danger {
   display: inline-block;
   padding: 2px 5px 0px 5px;
@@ -264,6 +265,11 @@ input:focus, textarea:focus {
   margin-right: 10px;
 }
 
+#planet-avatar-sm {
+  height: 20px;
+  margin-right: 10px;
+}
+
 #destination-description {
   padding: 10px 80px;
   border-bottom: 1px solid #b0740a;
@@ -309,6 +315,47 @@ input:focus, textarea:focus {
   height: 180px;
 }
 
+#user {
+  margin-top: 30px;
+  padding-left: 80px;
+  border-bottom: 1px solid #b0740a;
+  height: 160px;
+  overflow-y: auto;
+}
+
+#user-avatar,
+#about-me {
+  display: inline-block;
+  float: left;
+}
+
+#user-avatar {
+  width: 120px;
+  margin-right: 30px;
+  border: 4px solid #b0740a;
+  border-radius: 50%;
+}
+
+#about-me {
+  width: 50%;
+}
+
+#edit-profile-button {
+  display: inline-block;
+  width: 25%;
+}
+
+#edit-profile-button:hover {
+  color: rgba(176, 116, 10, 0.5);
+}
+
+#edit-profile-button:focus {
+  background-color: #b0740a;
+  color: rgba(46, 24, 1, 0.8);
+}
+
+
+
 /*******************
 
   FOOTER STYLES
@@ -340,4 +387,69 @@ footer {
 
 .footer-button:hover {
   color: rgba(176, 116, 10, 0.5);
+}
+
+/*******************
+
+  MEDIA QUERIES
+
+*******************/
+
+@media screen and (max-width: 542px) {
+  #scrollfix,
+  #main-content {
+    width: 100%;
+    border: none;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  body {
+    background-image: url("bg-small.jpg");
+  }
+  header {
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 20%;
+  }
+  #hero {
+    margin-left: 0;
+  }
+  #hero,
+  #profile-button,
+  #login-button,
+  #logout-button {
+    display: block;
+    float: none;
+    width: 100%;
+  }
+  #profile-button,
+  #login-button,
+  #logout-button {
+    height: 30px;
+    background-color: #b0740a;
+    color: rgba(46, 24, 1, 1);
+    margin: 0;
+    padding-left: 30px;
+    padding-top: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  #home-content {
+    height: 80%;
+    width: 80%;
+    margin: 20px auto;
+    clear: both;
+  }
+  #home-content h1 {
+    line-height: 1.2em;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  #home-content h1 {
+    line-height: 1.2em;
+  }
 }

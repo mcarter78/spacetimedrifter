@@ -2,7 +2,8 @@
   <div id="main-content">
     <h1>Destinations:</h1>
     <ul class="index">
-    <% @destinations.each do |dest| %>
+
+    <% @dests.each do |dest| %>
       <li>
         <%= image_tag("#{dest.name}.png", alt: "#{dest.name} avatar", id: "planet-avatar") %>
         <%= link_to "#{dest.name}", dest, method: :get %>

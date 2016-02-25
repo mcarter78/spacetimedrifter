@@ -1,13 +1,15 @@
-<% if @current_user %>
-  <div id="welcome">
-    <h1 id="welcome-message">Welcome back, <%= @current_user.username %>!</h1>
-    <h1>Drift on over to your Profile to get started!</h1>
-    <%= button_to "Go!", @current_user, method: :get, id: "sign-up-button" %>
-  </div>
-<% else %>
-  <div id="welcome">
-    <h1 id="welcome-message">Welcome to SpaceTimeDrifter!</h1>
-    <h1>A hub for intergalactic travellers to share their experiences!</h1>
-    <%= button_to "Sign Up!", new_user_path, method: :get, id: "sign-up-button" %>
-  </div>
-<% end %>
+<div id="home-content">
+  <% if @current_user %>
+    <div id="welcome">
+      <h1 id="welcome-message">Welcome back, <%= @current_user.username %>!</h1>
+      <h1>Drift on over to your Profile to get started!</h1>
+      <%= button_to "Go!", @current_user, method: :get, id: "sign-up-button" %>
+    </div>
+  <% else %>
+    <div id="welcome">
+      <h1 id="welcome-message">Welcome to SpaceTimeDrifter!</h1>
+      <h1>A hub for interplanetary travellers to share their experiences!</h1>
+      <%= button_to "Sign Up!", new_user_path, method: :get, id: "sign-up-button" %>
+    </div>
+  <% end %>
+</div>

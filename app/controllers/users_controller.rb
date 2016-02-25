@@ -3,7 +3,9 @@ class UsersController < ApplicationController
 
   def index
     @current_user = current_user
-    @users = User.all
+    @users_ = User.all
+    @users_sorted = @users_.sort_by { |user| user.posts.count }
+    @users = @users_sorted.reverse!
     render :index
   end
 
@@ -20,6 +22,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @current_user = current_user
     @user = User.find(params[:id])
     @posts = Post.all
     render :show

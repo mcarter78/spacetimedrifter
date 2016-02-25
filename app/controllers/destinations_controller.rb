@@ -3,6 +3,8 @@ class DestinationsController < ApplicationController
 
   def index
     @destinations = Destination.all
+    @destinations_sorted = @destinations.sort_by { |dest| dest.posts.count }
+    @dests = @destinations_sorted.reverse!
     render :index
   end
   def show
